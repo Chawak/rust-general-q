@@ -1,0 +1,1 @@
+/Users/chawakornphiantham/rust-learning/rust-ex-1/my_vector/target/debug/my_vector: /Users/chawakornphiantham/rust-learning/rust-ex-1/my_vector/src/lib.rs /Users/chawakornphiantham/rust-learning/rust-ex-1/my_vector/src/main.rs

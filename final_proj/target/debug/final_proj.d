@@ -1,0 +1,1 @@
+/Users/chawakornphiantham/rust-learning/final_proj/target/debug/final_proj: /Users/chawakornphiantham/rust-learning/final_proj/src/lib.rs /Users/chawakornphiantham/rust-learning/final_proj/src/main.rs
