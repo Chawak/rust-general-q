@@ -96,14 +96,14 @@
 **12. closure; capturing references vs moving ownership; fn() -> A vs Fn() -> A vs FnMut() -> A vs FnOnce() -> A; what is the difference between closure and normal function?**
 
 - capturing references vs moving ownership
-  - A closure can capture ref like | | {println!("{}",some_list)}
-  - Or moving ownership like move | | {println!("{}",some_list)}
+  - A closure can capture ref like `| | {println!("{}",some_list)}`
+  - Or moving ownership like move `| | {println!("{}",some_list)}`
 
 - fn() -> A vs Fn() -> A vs FnMut() -> A vs FnOnce() -> A 
-  - fn() -> A : Function pointer. A pointer to closure that contains nothing or function 
-  - FnOnce() -> A : Trait. Apply to func/closure that will be call once including the one that move ownership of data.
-  - Fn() -> A : Trait. Apply to immutable func/closures.
-  - FnMut() -> A : Trait. Apply to mutable func/closures.
+  - `fn() -> A` : Function pointer. A pointer to closure that contains nothing or function 
+  - `FnOnce() -> A` : Trait. Apply to func/closure that will be call once including the one that move ownership of data.
+  - `Fn() -> A` : Trait. Apply to immutable func/closures.
+  - `FnMut() -> A` : Trait. Apply to mutable func/closures.
 
 - closure vs func
 
@@ -185,7 +185,7 @@
 
 - It is a prefix to use a trait object to make it object safe.
 
-- Since Rust don't know the actual return type at the compile time if we want to return type that implement specific traits, we have to use keyword dyn to make Rust determine return type at the runtime. This is call dynamically dispatched.
+- Since Rust don't know the actual return type at the compile time if we want to return polymorphic type that implement specific traits, we have to use keyword dyn to make Rust determine return type at the runtime. This is call dynamically dispatched.
 
 - `dyn A` vs `impl A`
     - `impl` only allows monomorphic return while `dyn` allow polymorphic return 
@@ -200,10 +200,8 @@
 
         even though Foo and Baz implement Bar, this code will be error.
 
-    - dyn have to be used with pointer since we do not know the size of types at compile time.
+    - `dyn` have to be used with pointer since we do not know the size of types at compile time.
     
-    - impl allows mutiple trait bound like impl (Foo + Bar) but dyn does not.
-
 **18. how to return polymorphic return type that has the same trait?**
 
 - Declare the return type as a trait object using dyn. `Box<dyn Trait>`
